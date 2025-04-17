@@ -14,6 +14,7 @@ search.addEventListener("click", () => {
   .then((data) => {
     console.log(data[0])
     console.log(data[0].capital[0])
+    console.log(data[0].name.common)
     console.log(data[0].languages)
     console.log(data[0].flags.png)
     console.log(data[0].population)
@@ -23,9 +24,23 @@ search.addEventListener("click", () => {
     
  
     let flag = document.createElement("div")
-    flag.innerHTML = ` <img src="${data[0].flags.png}"> `
+    flag.innerHTML = ` <img src="${data[0].flags.png}">
+      <h2>${data[0].name.common}</h2>
+       <div class= "wrapper">
+            capital:
+          <h4>${data[0].capital[0]}</h4>
+            languages:
+          <b>${data[0].population}</b> 
+           continent 
+       
+       </div>
+      
+
+
+
+     `
     outcomes.appendChild(flag)
-    flag
+    flag.style.marginTop = "20px"
    })
   
    .catch(error => {
