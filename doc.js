@@ -11,8 +11,19 @@ search.addEventListener("click", () => {
    fetch(mainAPI)
   .then((res) => res.json())
   .then((data) => {
-    console.log(data);
+    console.log(data[0])
+    console.log(data[0].capital[0])
+    console.log(data[0].languages)
+    console.log(data[0].flags.png)
+    console.log(data[0].population)
+    console.log(data[0].continents[0])
+ 
     
+    
+  }).catch(error => {
+    let showerror = document.createElement9("p")
+    showerror.textContent = "network failure";
+    document.body.appendChild(showerror)
   })
   
 })
