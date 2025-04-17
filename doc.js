@@ -17,10 +17,14 @@ search.addEventListener("click", () => {
     console.log(data[0].flags.png)
     console.log(data[0].population)
     console.log(data[0].continents[0])
+    console.log(Object.keys(data[0].currencies)[0])
+    console.log(data[0].currencies[Object.keys(data[0].currencies)].name)
+    
  
     
     
-  }).catch(error => {
+   })
+   .catch(error => {
     let showerror = document.createElement9("p")
     showerror.textContent = "network failure";
     document.body.appendChild(showerror)
