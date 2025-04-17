@@ -3,9 +3,17 @@
 
 const countryIput = document.getElementById("countryInput")
 const search = document.getElementById("search")
-const mainAPI = ("https://restcountries.com/v3.1/name/{name}?fullText=true");
 
 search.addEventListener("click", () => {
+  let realCountry = "kenya";
+  const mainAPI = (`https://restcountries.com/v3.1/name/${realCountry}?fullText=true`);
+
+   fetch(mainAPI)
+  .then((res) => res.json())
+  .then((data) => {
+    console.log(data);
+    
+  })
   
 })
 
