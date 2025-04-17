@@ -3,6 +3,7 @@
 
 const countryIput = document.getElementById("countryInput")
 const search = document.getElementById("search")
+const outcomes = document.getElementById("container")
 
 search.addEventListener("click", () => {
   let realCountry = "kenya";
@@ -21,9 +22,12 @@ search.addEventListener("click", () => {
     console.log(data[0].currencies[Object.keys(data[0].currencies)].name)
     
  
-    
-    
+    let flag = document.createElement("div")
+    flag.innerHTML = ` <img src="${data[0].flags.png}"> `
+    outcomes.appendChild(flag)
+    flag
    })
+  
    .catch(error => {
     let showerror = document.createElement9("p")
     showerror.textContent = "network failure";
@@ -31,6 +35,7 @@ search.addEventListener("click", () => {
   })
   
 })
+
 
 
 
