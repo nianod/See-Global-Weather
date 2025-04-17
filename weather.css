@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: rgb(116, 116, 238);
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 10% auto;
+}
+.container {
+    border: 1px solid #fff;
+    padding: 5rem;
+    background: rgb(255, 255, 255);
+    border-style: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+}
+input {
+    border-style: none;
+    width: 15rem;
+    height: 2.5rem;
+    border-bottom: 2px solid blue;
+    padding: 5px;
+    border-radius: 5px;
+}
+input:focus {
+    outline: transparent;
+}
+
+button {
+    border-style: none;
+    background: blue;
+    padding: 10px;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+}
