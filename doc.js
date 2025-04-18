@@ -1,13 +1,10 @@
-import { lazy } from "react";
-
-
-
+ 
 const countryIput = document.getElementById("countryInput")
 const search = document.getElementById("search")
 const outcomes = document.getElementById("container")
 
 search.addEventListener("click", () => {
-  let realCountry = "kenya";
+  let realCountry = countryIput.value;
   const mainAPI = (`https://restcountries.com/v3.1/name/${realCountry}?fullText=true`);
 
    fetch(mainAPI)
@@ -28,15 +25,15 @@ search.addEventListener("click", () => {
     flag.innerHTML = ` <img src="${data[0].flags.png}">
       <h2>${data[0].name.common}</h2>
        <div class= "wrapper">
-            capital:
+            Capital:
         <b>${data[0].capital[0]}</b> <br>
             Population:
         <b>${data[0].population}</b> <br>
-           continent:
+           Continent:
         <b>${data[0].continents[0]}</b> <br>
           Currencies:
         <b>${data[0].currencies[Object.keys(data[0].currencies)].name}</b> <br>
-          languages:
+          Languages:
         <b>${Object.values(data[0].languages).toString().split(",").join(" , ")}</b>  
        </div>
       
@@ -46,6 +43,8 @@ search.addEventListener("click", () => {
      `
     outcomes.appendChild(flag)
     flag.style.marginTop = "20px"
+    flag.style.padding = "-10px"
+
    })
   
    .catch(error => {
