@@ -10,15 +10,15 @@ search.addEventListener("click", () => {
    fetch(mainAPI)
   .then((res) => res.json())
   .then((data) => {
-    console.log(data[0])
-    console.log(data[0].capital[0])
-    console.log(data[0].name.common)
-    console.log(data[0].flags.png)
-    console.log(data[0].population)
-    console.log(data[0].continents[0])
-    console.log(Object.values(data[0].languages).toString().split(",").join(", "))
-    console.log(Object.keys(data[0].currencies)[0])
-    console.log(data[0].currencies[Object.keys(data[0].currencies)].name)
+    // console.log(data[0])
+    // console.log(data[0].capital[0])
+    // console.log(data[0].name.common)
+    // console.log(data[0].flags.png)
+    // console.log(data[0].population)
+    // console.log(data[0].continents[0])
+    // console.log(Object.values(data[0].languages).toString().split(",").join(", "))
+    // console.log(Object.keys(data[0].currencies)[0])
+    // console.log(data[0].currencies[Object.keys(data[0].currencies)].name)
     
  
     let flag = document.createElement("div")
@@ -57,44 +57,7 @@ search.addEventListener("click", () => {
       outcomes.appendChild(show)
       show.style.color = "red"
    })
-   
-   
-   
-  //  (error => {
-  //   let showerror = document.createElement9("p")
-  //   showerror.textContent = "network failure";
-  //   document.body.appendChild(showerror)
-  // })
-  
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
