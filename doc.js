@@ -49,7 +49,7 @@ search.addEventListener("click", () => {
   
    .catch(() => {
      let show = document.createElement("i")
-      if(countryIput.value.length == 0) {
+      if(realCountry.length === 0) {
         show.innerHTML = `<h3>input cannot be empty</h3>`
       } else {
        show.innerHTML = `<h3>Please insert a valid country</h3>`
